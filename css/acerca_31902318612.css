@@ -1,0 +1,113 @@
+/* =============================================
+   Kokken – acerca_319023186.css
+   Carné: 3190-23-18612
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --cream_319023186:    #fdf6ee;
+  --brown_319023186:    #3b1f0e;
+  --rose_319023186:     #c8796a;
+  --gold_319023186:     #c49a5a;
+  --light_319023186:    #faf3eb;
+  --gray_319023186:     #7a6a5e;
+  --white_319023186:    #ffffff;
+  --dark_319023186:     #1e0f06;
+  --font-disp_319023186: 'Playfair Display', serif;
+  --font-body_319023186: 'DM Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream_319023186); color: var(--brown_319023186); font-family: var(--font-body_319023186); font-weight: 300; line-height: 1.7; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar_319023186 { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 1rem 4rem; background: rgba(253,246,238,.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,154,90,.22); }
+.logo_319023186 { font-family: var(--font-disp_319023186); font-size: 1.9rem; font-weight: 700; color: var(--brown_319023186); letter-spacing: .04em; }
+.nav-links_319023186 { display: flex; gap: 2.8rem; list-style: none; }
+.nav-links_319023186 a { font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gray_319023186); transition: color .3s; }
+.nav-links_319023186 a:hover, .nav-links_319023186 a.active_319023186 { color: var(--rose_319023186); }
+.hamburger_319023186 { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--brown_319023186); }
+
+/* PAGE HEADER */
+.page-header_319023186 { padding: 10rem 4rem 5rem; background: linear-gradient(135deg, var(--brown_319023186), #5c2f14); color: var(--cream_319023186); text-align: center; }
+.eyebrow_319023186 { display: inline-block; font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold_319023186); border-bottom: 1px solid var(--gold_319023186); padding-bottom: .3rem; margin-bottom: 1rem; }
+.page-header_319023186 h1 { font-family: var(--font-disp_319023186); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 400; margin-bottom: 1rem; }
+.page-header_319023186 h1 em { font-style: italic; color: var(--rose_319023186); }
+.page-header_319023186 p { color: rgba(253,246,238,.7); }
+
+/* DEV SECTION */
+.dev-section_319023186 { padding: 6rem 4rem; display: flex; justify-content: center; }
+.dev-card_319023186 { display: flex; gap: 4rem; align-items: center; background: var(--white_319023186); border-radius: 8px; padding: 3.5rem; max-width: 900px; width: 100%; box-shadow: 0 8px 40px rgba(59,31,14,.1); }
+.dev-photo_319023186 { flex-shrink: 0; }
+.dev-photo_319023186 img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--gold_319023186); }
+.dev-label_319023186 { display: inline-block; font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold_319023186); border-bottom: 1px solid var(--gold_319023186); padding-bottom: .25rem; margin-bottom: .8rem; }
+.dev-info_319023186 h2 { font-family: var(--font-disp_319023186); font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem; }
+.dev-details_319023186 { display: flex; flex-direction: column; gap: .65rem; }
+.dev-row_319023186 { display: flex; gap: 1rem; align-items: baseline; }
+.dev-key_319023186 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold_319023186); min-width: 100px; flex-shrink: 0; }
+.dev-val_319023186 { font-size: .88rem; color: var(--gray_319023186); }
+
+/* PROJECT SECTION */
+.project-section_319023186 { background: var(--light_319023186); padding: 6rem 4rem; }
+.section-header_319023186 { text-align: center; margin-bottom: 3rem; }
+.label_319023186 { display: inline-block; font-size: .68rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold_319023186); margin-bottom: .6rem; }
+.section-header_319023186 h2 { font-family: var(--font-disp_319023186); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; }
+.project-grid_319023186 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+.project-card_319023186 { background: var(--white_319023186); border-radius: 6px; padding: 2rem; box-shadow: 0 4px 16px rgba(59,31,14,.06); }
+.project-icon_319023186 { display: block; font-size: 2rem; margin-bottom: 1rem; }
+.project-card_319023186 h4 { font-family: var(--font-disp_319023186); font-size: 1.1rem; margin-bottom: .8rem; color: var(--brown_319023186); }
+.project-card_319023186 ul { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+.project-card_319023186 li { font-size: .82rem; color: var(--gray_319023186); padding-left: .9rem; position: relative; }
+.project-card_319023186 li::before { content: "·"; color: var(--gold_319023186); position: absolute; left: 0; }
+
+/* ABOUT KOKKEN */
+.about-kokken_319023186 { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+.about-img_319023186 { overflow: hidden; }
+.about-img_319023186 img { width: 100%; height: 100%; object-fit: cover; }
+.about-text_319023186 { background: var(--brown_319023186); color: var(--cream_319023186); padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; }
+.about-text_319023186 .label_319023186 { color: var(--gold_319023186); }
+.about-text_319023186 h2 { font-family: var(--font-disp_319023186); font-size: 2.2rem; font-weight: 400; }
+.about-text_319023186 p { font-size: .88rem; opacity: .8; line-height: 1.8; }
+.about-stats_319023186 { display: flex; gap: 2rem; margin-top: .5rem; }
+.stat_319023186 { display: flex; flex-direction: column; align-items: center; }
+.stat_319023186 strong { font-family: var(--font-disp_319023186); font-size: 2rem; color: var(--gold_319023186); line-height: 1; }
+.stat_319023186 span { font-size: .72rem; opacity: .65; text-align: center; margin-top: .3rem; }
+
+/* FOOTER */
+.footer_319023186 { background: var(--dark_319023186); color: rgba(253,246,238,.7); }
+.footer-top_319023186 { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; padding: 4rem; border-bottom: 1px solid rgba(255,255,255,.06); }
+.footer-brand_319023186 .logo_319023186 { font-size: 2rem; color: var(--cream_319023186); }
+.footer-brand_319023186 p { font-size: .8rem; margin-top: .3rem; }
+.footer-note_319023186 { font-size: .72rem !important; margin-top: .8rem !important; opacity: .55; line-height: 1.6; }
+.footer-nav_319023186 h5, .footer-social-block_319023186 h5 { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold_319023186); margin-bottom: 1rem; }
+.footer-nav_319023186 { display: flex; flex-direction: column; gap: .5rem; }
+.footer-nav_319023186 a { font-size: .82rem; color: rgba(253,246,238,.6); transition: color .3s; }
+.footer-nav_319023186 a:hover { color: var(--rose_319023186); }
+.footer-social_319023186 { display: flex; flex-direction: column; gap: .7rem; }
+.footer-social_319023186 a { display: flex; align-items: center; gap: .6rem; font-size: .82rem; color: rgba(253,246,238,.6); transition: color .3s; }
+.footer-social_319023186 a:hover { color: var(--gold_319023186); }
+.footer-social_319023186 svg { width: 16px; height: 16px; flex-shrink: 0; }
+.footer-bottom_319023186 { text-align: center; padding: 1.5rem; font-size: .72rem; opacity: .4; }
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  .navbar_319023186 { padding: 1rem 1.5rem; }
+  .hamburger_319023186 { display: block; }
+  .nav-links_319023186 { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: var(--cream_319023186); padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid rgba(196,154,90,.2); }
+  .nav-links_319023186.open_319023186 { display: flex; }
+  .page-header_319023186 { padding: 7rem 1.5rem 3rem; }
+  .dev-section_319023186 { padding: 4rem 1.5rem; }
+  .dev-card_319023186 { flex-direction: column; text-align: center; padding: 2rem 1.5rem; gap: 2rem; }
+  .dev-row_319023186 { flex-direction: column; gap: .2rem; align-items: center; }
+  .dev-key_319023186 { min-width: auto; }
+  .project-section_319023186 { padding: 4rem 1.5rem; }
+  .project-grid_319023186 { grid-template-columns: 1fr; }
+  .about-kokken_319023186 { grid-template-columns: 1fr; }
+  .about-img_319023186 { height: 220px; }
+  .about-text_319023186 { padding: 3rem 1.5rem; }
+  .about-stats_319023186 { justify-content: center; }
+  .footer-top_319023186 { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; gap: 2rem; }
+}
