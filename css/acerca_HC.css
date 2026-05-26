@@ -3,7 +3,7 @@
    Iniciales del grupo: HC
    ============================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap");
 
 :root {
   --teal_HC: #007ba1;
@@ -54,18 +54,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem 4rem;
-  background: rgba(255, 255, 255, 0.97);
+  padding: 0.8rem 4rem;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--teal_HC);
-  box-shadow: 0 2px 12px rgba(0, 123, 161, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 123, 161, 0.1);
 }
 .nav-logo_HC {
   display: flex;
   align-items: center;
 }
 .nav-logo_HC img {
-  height: 56px;
+  height: 52px;
   width: auto;
 }
 .nav-links_HC {
@@ -89,7 +89,7 @@ a {
   display: none;
   background: none;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
   color: var(--brown_HC);
 }
@@ -132,7 +132,7 @@ a {
 }
 .page-header_HC h1 {
   font-family: var(--font-disp_HC);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -144,14 +144,7 @@ a {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* ── TEAM SECTION ── */
-.team-section_HC {
-  padding: 6rem 4rem;
-}
-.section-header_HC {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+/* ── SHARED SECTION HELPERS ── */
 .label_HC {
   display: inline-block;
   font-size: 0.68rem;
@@ -165,88 +158,122 @@ a {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 400;
 }
+.sub_HC {
+  color: var(--gray_HC);
+  font-size: 0.88rem;
+  max-width: 560px;
+  margin: 0.5rem auto 0;
+}
 
-.team-grid_HC {
+/* ── DEV SECTION ── */
+.dev-section_HC {
+  padding: 6rem 4rem;
+  background: var(--light_HC);
+}
+
+.dev-cards-grid_HC {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .dev-card_HC {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
   background: var(--white_HC);
   border-radius: 10px;
   padding: 2.5rem;
   box-shadow: 0 6px 30px rgba(0, 123, 161, 0.1);
-  border-top: 4px solid var(--teal_HC);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.2rem;
+  border-top: 3px solid var(--teal_HC);
   transition:
     transform 0.3s,
     box-shadow 0.3s;
 }
 .dev-card_HC:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 123, 161, 0.16);
 }
+
+/* Photo — real image */
 .dev-photo_HC img {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--teal_HC);
+  border: 3px solid var(--teal_HC);
+  flex-shrink: 0;
 }
+
+/* Photo — placeholder (when no image yet) */
+.dev-photo-placeholder_HC {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal_HC), #003d50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 3px solid var(--teal_HC);
+}
+.dev-photo-placeholder_HC span {
+  font-family: var(--font-disp_HC);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold_HC);
+}
+
 .dev-label_HC {
   display: inline-block;
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold_HC);
-  border-bottom: 1px solid var(--gold_HC);
+  color: var(--teal_HC);
+  border-bottom: 1px solid var(--teal_HC);
   padding-bottom: 0.2rem;
+  margin-bottom: 0.6rem;
 }
-.dev-card_HC h3 {
+.dev-info_HC h2 {
   font-family: var(--font-disp_HC);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
+  margin-bottom: 1.2rem;
   color: var(--brown_HC);
+  line-height: 1.3;
 }
 .dev-details_HC {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 .dev-row_HC {
   display: flex;
-  justify-content: space-between;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid rgba(0, 123, 161, 0.1);
-  align-items: baseline;
   gap: 0.8rem;
+  align-items: baseline;
 }
 .dev-key_HC {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--teal_HC);
+  min-width: 90px;
   flex-shrink: 0;
+  font-weight: 500;
 }
 .dev-val_HC {
   font-size: 0.84rem;
   color: var(--gray_HC);
-  text-align: right;
 }
 
 /* ── PROJECT SECTION ── */
 .project-section_HC {
-  background: var(--light_HC);
   padding: 6rem 4rem;
+  background: var(--cream_HC);
 }
+
 .project-grid_HC {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -259,6 +286,7 @@ a {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 16px rgba(0, 123, 161, 0.07);
+  border-top: 3px solid var(--teal_HC);
 }
 .project-icon_HC {
   display: block;
@@ -280,7 +308,7 @@ a {
 .project-card_HC li {
   font-size: 0.82rem;
   color: var(--gray_HC);
-  padding-left: 0.9rem;
+  padding-left: 1rem;
   position: relative;
 }
 .project-card_HC li::before {
@@ -308,15 +336,20 @@ a {
 }
 .about-text_HC {
   background: var(--teal-dark_HC);
-  color: var(--cream_HC);
+  color: var(--white_HC);
   padding: 5rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.2rem;
 }
-.about-text_HC .label_HC {
+.about-label_HC {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   color: var(--gold_HC);
+  margin-bottom: 0.2rem;
 }
 .about-text_HC h2 {
   font-family: var(--font-disp_HC);
@@ -325,7 +358,7 @@ a {
 }
 .about-text_HC p {
   font-size: 0.88rem;
-  opacity: 0.85;
+  opacity: 0.82;
   line-height: 1.8;
 }
 .about-stats_HC {
@@ -375,8 +408,8 @@ a {
   padding: 4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-.footer-logo_HC img {
-  height: 60px;
+.footer-brand_HC .footer-logo_HC img {
+  height: 55px;
   width: auto;
   margin-bottom: 0.5rem;
 }
@@ -433,9 +466,14 @@ a {
 }
 
 /* ── MEDIA QUERIES ── */
+@media (max-width: 1024px) {
+  .dev-cards-grid_HC {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 768px) {
   .navbar_HC {
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1.5rem;
   }
   .hamburger_HC {
     display: block;
@@ -459,11 +497,22 @@ a {
   .page-header_HC {
     padding: 7rem 1.5rem 3rem;
   }
-  .team-section_HC {
+  .dev-section_HC {
     padding: 4rem 1.5rem;
   }
-  .team-grid_HC {
-    grid-template-columns: 1fr;
+  .dev-card_HC {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .dev-row_HC {
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: center;
+  }
+  .dev-key_HC {
+    min-width: auto;
   }
   .project-section_HC {
     padding: 4rem 1.5rem;
@@ -475,21 +524,13 @@ a {
     grid-template-columns: 1fr;
   }
   .about-img_HC {
-    height: 250px;
+    height: 220px;
   }
   .about-text_HC {
     padding: 3rem 1.5rem;
   }
   .about-stats_HC {
     justify-content: center;
-  }
-  .dev-row_HC {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
-  .dev-val_HC {
-    text-align: left;
   }
   .footer-top_HC {
     grid-template-columns: 1fr;
