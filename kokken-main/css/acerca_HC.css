@@ -44,6 +44,15 @@ a {
   text-decoration: none;
 }
 
+  .dev-photo_HC img {
+  width: 110px;        /* Tamaño igual al que tenían los placeholders */
+  height: 110px;       /* Tamaño igual al que tenían los placeholders */
+  border-radius: 50%;  /* Esto lo vuelve circular */
+  object-fit: cover;   /* Evita que la foto se deforme */
+  border: 3px solid var(--teal_HC); /* Mantiene el borde decorativo */
+  flex-shrink: 0;
+}
+
 /* ── NAVBAR ── */
 .navbar_HC {
   position: fixed;
@@ -537,4 +546,6 @@ a {
     padding: 2.5rem 1.5rem;
     gap: 2rem;
   }
+
+
 }
