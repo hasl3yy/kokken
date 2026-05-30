@@ -1,0 +1,551 @@
+/* =============================================
+   Kokken – acerca_HC.css
+   Iniciales del grupo: HC
+   ============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap");
+
+:root {
+  --teal_HC: #007ba1;
+  --teal-dark_HC: #005f7a;
+  --cream_HC: #fdf6ee;
+  --brown_HC: #3b1f0e;
+  --gold_HC: #d4a373;
+  --light_HC: #faf3eb;
+  --gray_HC: #7a6a5e;
+  --white_HC: #ffffff;
+  --dark_HC: #1e0f06;
+  --font-disp_HC: "Playfair Display", serif;
+  --font-body_HC: "DM Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--cream_HC);
+  color: var(--brown_HC);
+  font-family: var(--font-body_HC);
+  font-weight: 300;
+  line-height: 1.7;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+  .dev-photo_HC img {
+  width: 110px;        /* Tamaño igual al que tenían los placeholders */
+  height: 110px;       /* Tamaño igual al que tenían los placeholders */
+  border-radius: 50%;  /* Esto lo vuelve circular */
+  object-fit: cover;   /* Evita que la foto se deforme */
+  border: 3px solid var(--teal_HC); /* Mantiene el borde decorativo */
+  flex-shrink: 0;
+}
+
+/* ── NAVBAR ── */
+.navbar_HC {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 4rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--teal_HC);
+  box-shadow: 0 2px 12px rgba(0, 123, 161, 0.1);
+}
+.nav-logo_HC {
+  display: flex;
+  align-items: center;
+}
+.nav-logo_HC img {
+  height: 52px;
+  width: auto;
+}
+.nav-links_HC {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links_HC a {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray_HC);
+  transition: color 0.3s;
+  font-weight: 500;
+}
+.nav-links_HC a:hover,
+.nav-links_HC a.active_HC {
+  color: var(--teal_HC);
+}
+.hamburger_HC {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--brown_HC);
+}
+
+/* ── PAGE HEADER ── */
+.page-header_HC {
+  padding: 10rem 4rem 5rem;
+  background: linear-gradient(
+    135deg,
+    var(--teal_HC),
+    var(--teal-dark_HC) 60%,
+    #003d50
+  );
+  color: var(--white_HC);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-header_HC::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=40")
+    center/cover no-repeat;
+  opacity: 0.08;
+}
+.page-header_HC > * {
+  position: relative;
+  z-index: 1;
+}
+.eyebrow_HC {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold_HC);
+  border-bottom: 1px solid var(--gold_HC);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+.page-header_HC h1 {
+  font-family: var(--font-disp_HC);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.page-header_HC h1 em {
+  font-style: italic;
+  color: var(--gold_HC);
+}
+.page-header_HC p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── SHARED SECTION HELPERS ── */
+.label_HC {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal_HC);
+  margin-bottom: 0.6rem;
+}
+.section-header_HC h2 {
+  font-family: var(--font-disp_HC);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+}
+.sub_HC {
+  color: var(--gray_HC);
+  font-size: 0.88rem;
+  max-width: 560px;
+  margin: 0.5rem auto 0;
+}
+
+/* ── DEV SECTION ── */
+.dev-section_HC {
+  padding: 6rem 4rem;
+  background: var(--light_HC);
+}
+
+.dev-cards-grid_HC {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dev-card_HC {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: var(--white_HC);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 6px 30px rgba(0, 123, 161, 0.1);
+  border-top: 3px solid var(--teal_HC);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.dev-card_HC:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 123, 161, 0.16);
+}
+
+/* Photo — real image */
+.dev-photo_HC img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal_HC);
+  flex-shrink: 0;
+}
+
+/* Photo — placeholder (when no image yet) */
+.dev-photo-placeholder_HC {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal_HC), #003d50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 3px solid var(--teal_HC);
+}
+.dev-photo-placeholder_HC span {
+  font-family: var(--font-disp_HC);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold_HC);
+}
+
+.dev-label_HC {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal_HC);
+  border-bottom: 1px solid var(--teal_HC);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+.dev-info_HC h2 {
+  font-family: var(--font-disp_HC);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--brown_HC);
+  line-height: 1.3;
+}
+.dev-details_HC {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.dev-row_HC {
+  display: flex;
+  gap: 0.8rem;
+  align-items: baseline;
+}
+.dev-key_HC {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal_HC);
+  min-width: 90px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.dev-val_HC {
+  font-size: 0.84rem;
+  color: var(--gray_HC);
+}
+
+/* ── PROJECT SECTION ── */
+.project-section_HC {
+  padding: 6rem 4rem;
+  background: var(--cream_HC);
+}
+
+.project-grid_HC {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.project-card_HC {
+  background: var(--white_HC);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 123, 161, 0.07);
+  border-top: 3px solid var(--teal_HC);
+}
+.project-icon_HC {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.project-card_HC h4 {
+  font-family: var(--font-disp_HC);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--brown_HC);
+}
+.project-card_HC ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.project-card_HC li {
+  font-size: 0.82rem;
+  color: var(--gray_HC);
+  padding-left: 1rem;
+  position: relative;
+}
+.project-card_HC li::before {
+  content: "·";
+  color: var(--teal_HC);
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* ── ABOUT KOKKEN ── */
+.about-kokken_HC {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.about-img_HC {
+  overflow: hidden;
+}
+.about-img_HC img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-text_HC {
+  background: var(--teal-dark_HC);
+  color: var(--white_HC);
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.about-label_HC {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold_HC);
+  margin-bottom: 0.2rem;
+}
+.about-text_HC h2 {
+  font-family: var(--font-disp_HC);
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.about-text_HC p {
+  font-size: 0.88rem;
+  opacity: 0.82;
+  line-height: 1.8;
+}
+.about-stats_HC {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+.stat_HC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat_HC strong {
+  font-family: var(--font-disp_HC);
+  font-size: 2rem;
+  color: var(--gold_HC);
+  line-height: 1;
+}
+.stat_HC span {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+/* ── AVISO ── */
+.aviso_HC {
+  background: var(--teal-dark_HC);
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+  padding: 1.2rem 2rem;
+  font-size: 0.85rem;
+}
+.aviso_HC strong {
+  color: var(--gold_HC);
+}
+
+/* ── FOOTER ── */
+.footer_HC {
+  background: var(--dark_HC);
+  color: rgba(253, 246, 238, 0.7);
+}
+.footer-top_HC {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 3rem;
+  padding: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer-brand_HC .footer-logo_HC img {
+  height: 55px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+.footer-brand_HC p {
+  font-size: 0.8rem;
+}
+.footer-nav_HC h5,
+.footer-social-block_HC h5 {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold_HC);
+  margin-bottom: 1rem;
+}
+.footer-nav_HC {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-nav_HC a {
+  font-size: 0.82rem;
+  color: rgba(253, 246, 238, 0.6);
+  transition: color 0.3s;
+}
+.footer-nav_HC a:hover {
+  color: var(--teal_HC);
+}
+.footer-social_HC {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.footer-social_HC a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: rgba(253, 246, 238, 0.6);
+  transition: color 0.3s;
+}
+.footer-social_HC a:hover {
+  color: var(--gold_HC);
+}
+.footer-social_HC svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.footer-bottom_HC {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.72rem;
+  opacity: 0.4;
+}
+
+/* ── MEDIA QUERIES ── */
+@media (max-width: 1024px) {
+  .dev-cards-grid_HC {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .navbar_HC {
+    padding: 0.8rem 1.5rem;
+  }
+  .hamburger_HC {
+    display: block;
+  }
+  .nav-links_HC {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white_HC);
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(0, 123, 161, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links_HC.open_HC {
+    display: flex;
+  }
+  .page-header_HC {
+    padding: 7rem 1.5rem 3rem;
+  }
+  .dev-section_HC {
+    padding: 4rem 1.5rem;
+  }
+  .dev-card_HC {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .dev-row_HC {
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: center;
+  }
+  .dev-key_HC {
+    min-width: auto;
+  }
+  .project-section_HC {
+    padding: 4rem 1.5rem;
+  }
+  .project-grid_HC {
+    grid-template-columns: 1fr;
+  }
+  .about-kokken_HC {
+    grid-template-columns: 1fr;
+  }
+  .about-img_HC {
+    height: 220px;
+  }
+  .about-text_HC {
+    padding: 3rem 1.5rem;
+  }
+  .about-stats_HC {
+    justify-content: center;
+  }
+  .footer-top_HC {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+
+
+}
