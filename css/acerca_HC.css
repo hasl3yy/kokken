@@ -44,8 +44,6 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-=======
   .dev-photo_HC img {
   width: 110px;        /* Tamaño igual al que tenían los placeholders */
   height: 110px;       /* Tamaño igual al que tenían los placeholders */
@@ -55,7 +53,6 @@ a {
   flex-shrink: 0;
 }
 
->>>>>>> 28176186a62af2fa80fb55839ca9e09caa5a7424
 /* ── NAVBAR ── */
 .navbar_HC {
   position: fixed;
